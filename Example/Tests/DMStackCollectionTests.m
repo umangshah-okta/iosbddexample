@@ -6,14 +6,21 @@
 //  Copyright (c) 2015 Chandra Shirashyad. All rights reserved.
 //
 
+#import "DMStackCollection.h"
+
 SPEC_BEGIN(DMStackCollectionSpecs)
 
 describe(@"with a stack collection", ^{
     
+    __block DMStackCollection *stack;
+    
+    beforeEach(^{
+        stack = [[DMStackCollection alloc] init];
+    });
+    
     context(@"when creating a new collection", ^{
-        
-        pending(@"the collection should exist", ^{
-            
+        it(@"the collection should exist", ^{
+            [stack shouldNotBeNil];
         });
     });
     
