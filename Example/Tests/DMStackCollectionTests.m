@@ -25,12 +25,10 @@ describe(@"with a stack collection", ^{
     });
     
     context(@"pushing an object onto the stack", ^{
-        
         it(@"the stack count should be one", ^{
             [stack push: @"My First Stack Item"];
             [[stack should] haveCountOf: 1];
         });
-        
     });
     
     context(@"popping an object off of the stack", ^{
