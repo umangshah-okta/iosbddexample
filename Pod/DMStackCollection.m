@@ -29,4 +29,8 @@
 - (void)push:(id)object {
     [self.list addObject:object];
 }
+
+- (id)pop {
+    return nil;
+}
 @end

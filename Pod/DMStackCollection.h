@@ -11,4 +11,5 @@
 @interface DMStackCollection : NSObject
 @property (nonatomic, readonly) NSUInteger count;
 - (void)push:(id)object;
+- (id)pop;
 @end
