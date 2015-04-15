@@ -26,8 +26,9 @@ describe(@"with a stack collection", ^{
     
     context(@"pushing an object onto the stack", ^{
         
-        pending(@"the stack count should be one", ^{
-            
+        it(@"the stack count should be one", ^{
+            [stack push: @"My First Stack Item"];
+            [[stack should] haveCountOf: 1];
         });
         
     });
@@ -40,19 +41,7 @@ describe(@"with a stack collection", ^{
         
     });
     
-    context(@"peeking at the topmost object on the stack", ^{
-        
-        pending(@"the popped object should be the same as the last pushed", ^{
-            
-        });
-        
-        pending(@"the stacks object count should be unaffected by peeking", ^{
-            
-        });
-        
-        
-    });
-    
+       
     context(@"the stack should contain at least 10 concurrent objects", ^{
         
         pending(@"add objects, compare after popping and check stack count", ^{

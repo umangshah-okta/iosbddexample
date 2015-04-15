@@ -9,5 +9,7 @@
 #import "DMStackCollection.h"
 
 @implementation DMStackCollection
-
+- (void)push:(id)object {
+    
+}
 @end
