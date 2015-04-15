@@ -14,8 +14,13 @@ describe(@"with a stack collection", ^{
     
     __block DMStackCollection *stack;
     
-    beforeEach(^{
+    
+    beforeAll(^{
         stack = [[DMStackCollection alloc] init];
+    });
+    
+    afterAll(^{
+        stack = nil;
     });
     
     context(@"when creating a new collection", ^{
@@ -33,10 +38,17 @@ describe(@"with a stack collection", ^{
     
     context(@"popping an object off of the stack", ^{
         
-        pending(@"the popped object should be the same as pushed", ^{
+        it(@"the popped object should be the same as pushed", ^{
+            NSString *expectedStackItem = @"Our First Stack Item";
             
+            [stack push: expectedStackItem];
+            
+            NSString *actualStackItem = [stack pop];
+            
+            [[expectedStackItem should] equal: actualStackItem];
+            
+            [[stack should] beEmpty];
         });
-        
     });
     
        
