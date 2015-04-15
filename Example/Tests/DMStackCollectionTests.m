@@ -53,11 +53,34 @@ describe(@"with a stack collection", ^{
     
        
     context(@"the stack should contain at least 10 concurrent objects", ^{
-        
-        pending(@"add objects, compare after popping and check stack count", ^{
+            const NSUInteger minimumItemCount = 10;
+            const NSString *itemFormat = @"Item %lu";
             
-        });
-        
+            it(@"add minimum number of objects to the stack", ^{
+                for (NSUInteger itemCount = 0 ;itemCount < minimumItemCount; itemCount++) {
+                    [stack push:[NSString stringWithFormat:(NSString *)itemFormat, (unsigned long)itemCount]];
+                }
+                [[stack should] haveCountOf: minimumItemCount];
+            });
+            
+            it(@"pop items from the stack", ^{
+                
+                NSString *objectFromStack;
+                NSUInteger itemCount = minimumItemCount;
+                
+                while ((objectFromStack = [stack pop]) != nil) {
+                    itemCount--;
+                    
+                    NSString *expectedObject = [NSString stringWithFormat:(NSString *)itemFormat, (unsigned long)itemCount];
+                    
+                    [[expectedObject should] equal: objectFromStack];
+                }   
+            });
+            
+            it(@"stack should be empty", ^{
+                [[stack should] beEmpty];
+                
+            });
     });
     
 });
