@@ -1,0 +1,17 @@
+PODS:
+  - Kiwi (2.3.1)
+  - okta-ios-utils (0.2.0)
+
+DEPENDENCIES:
+  - Kiwi
+  - okta-ios-utils (from `../`)
+
+EXTERNAL SOURCES:
+  okta-ios-utils:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
+  okta-ios-utils: e98272321761da8caadfd09b2f8c8e06b9b0f765
+
+COCOAPODS: 0.35.0

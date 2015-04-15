@@ -1,0 +1,11 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+
+target 'okta-ios-utils', :exclusive => true do
+  pod "okta-ios-utils", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "okta-ios-utils", :path => "../"
+
+  pod 'Kiwi'
+end

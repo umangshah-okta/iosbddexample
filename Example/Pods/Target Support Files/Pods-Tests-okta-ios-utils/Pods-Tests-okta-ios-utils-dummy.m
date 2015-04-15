@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Tests_okta_ios_utils : NSObject
+@end
+@implementation PodsDummy_Pods_Tests_okta_ios_utils
+@end
