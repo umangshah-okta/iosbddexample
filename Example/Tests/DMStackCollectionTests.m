@@ -15,11 +15,11 @@ describe(@"with a stack collection", ^{
     __block DMStackCollection *stack;
     
     
-    beforeAll(^{
+    beforeEach(^{
         stack = [[DMStackCollection alloc] init];
     });
     
-    afterAll(^{
+    afterEach(^{
         stack = nil;
     });
     
@@ -45,7 +45,7 @@ describe(@"with a stack collection", ^{
             
             NSString *actualStackItem = [stack pop];
             
-            [[expectedStackItem should] equal: actualStackItem];
+            [[expectedStackItem should] equal:actualStackItem];
             
             [[stack should] beEmpty];
         });
